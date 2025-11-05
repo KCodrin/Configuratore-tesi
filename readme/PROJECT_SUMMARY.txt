@@ -1,0 +1,31 @@
+Project Name: Thesis Configurator
+Version: 1.3
+Description: A single-page web application (SPA) for the guided configuration and printing order of university theses. The system guides the user through a 7-step process, from uploading PDF files to checkout.
+
+Main Technology Stack:
+- React 19 (with Hooks)
+- TypeScript
+- TailwindCSS
+- pdf.js (for PDF manipulation)
+
+User Flow:
+- Step 1: Upload Thesis and Cover Page.
+- Step 2: Configure paper and printing options (double-sided, etc.).
+- Step 3: Select color for each individual page with automatic detection.
+- Step 4: Choose binding and cover finishes with a dynamic preview.
+- Step 5: Add extra options (e.g., metal corners, custom applications).
+- Step 6: Final review with an interactive 3D preview (flipbook).
+- Step 7: Enter billing/shipping details and payment.
+
+Key Features:
+- Modern and responsive interface.
+- In-browser generation of PDF page previews.
+- Real-time price estimate calculation with every selection.
+- Dynamic cover preview with material textures and lamination effects.
+- Automatic detection of color pages to optimize costs.
+- Management of printing conflicts (e.g., double-sided).
+- Final "flipbook" preview for a complete review of the product.
+
+Data Persistence:
+- The application does not require a backend.
+- All user choices and configuration data are saved in the browser's `localStorage`, ensuring persistence between sessions and the transfer of information between the various steps.

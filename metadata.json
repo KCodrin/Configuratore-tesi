@@ -1,0 +1,5 @@
+{
+  "name": "Configuratore Tesi",
+  "description": "Un'applicazione per caricare e configurare la stampa di una tesi di laurea. Trascina un file PDF per iniziare.",
+  "requestFramePermissions": []
+}

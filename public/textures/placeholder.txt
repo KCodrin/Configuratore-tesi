@@ -1,0 +1,3 @@
+Questa cartella conterrà le immagini delle texture per le copertine (es. metallic-white-pearl.webp, leather-black.webp).
+Assicurati che i nomi dei file corrispondano a quelli definiti in `textureMap` nel componente `Step4Binding.tsx`.
+I nomi sono generalmente composti da: `[gruppo]-[colore].webp` (tutto in minuscolo). Esempio: "Dark Blue" del gruppo "Prestige" diventa "prestige-dark-blue.webp".

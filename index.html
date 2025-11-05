@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Configuratore Tesi</title>
+    
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#137fec",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101922",
+                "foreground-light": "#101922",
+                "foreground-dark": "#f6f7f8",
+                "card-light": "#ffffff",
+                "card-dark": "#1b2734",
+                "subtle-light": "#e5e7eb",
+                "subtle-dark": "#374151",
+                "muted-light": "#6b7280",
+                "muted-dark": "#9ca3af",
+              },
+              fontFamily: {
+                "display": ["Inter", "sans-serif"]
+              },
+              borderRadius: {
+                "DEFAULT": "0.5rem",
+                "lg": "0.75rem",
+                "xl": "1rem",
+                "full": "9999px"
+              },
+            },
+          },
+        }
+      </script>
+      <style>
+        .material-symbols-outlined {
+          font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+
+        /* --- STILI STEP 3 --- */
+        .wrap {
+          max-width: 1400px;
+          padding-left: 15px;
+          padding-right: 15px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .page-card { position: relative; border: 2px solid transparent; isolation: isolate; }
+        .page-image { transition: filter .18s ease; }
+        .mode-bw .page-image { filter: grayscale(1) contrast(1.05); }
+        .mode-color .page-image { filter: none; }
+        .choice-pill { border: 1px solid #d1d5db; color: #6b7280; }
+        .peer:checked + .choice-pill {
+          border-color: #137fec;
+          background: #137fec;
+          color: #fff;
+        }
+        .conflict .page-card { box-shadow: 0 0 0 2px #f59e0b inset; border-color: #f59e0b; }
+        .frontespizio-badge {
+          position: absolute;
+          left: 10px;
+          bottom: 10px;
+          font-size: 11px;
+          font-weight: 600;
+          background: #137fec;
+          color: #fff;
+          padding: 6px 10px;
+          border-radius: 9999px;
+          box-shadow: 0 1px 2px rgba(0,0,0,.12);
+        }
+        .btn-quick[aria-pressed="true"] {
+          outline: 2px solid #137fec;
+          outline-offset: 2px;
+        }
+
+        /* Bordo gradiente statico per pagine a colori */
+        .group.mode-color .page-card {
+          border: 3px solid transparent;
+          border-radius: 0.75rem; /* lg */
+          background: linear-gradient(white, white) padding-box, linear-gradient(135deg, #137fec, #ff0080, #ffc800) border-box;
+        }
+        .dark .group.mode-color .page-card {
+          background: linear-gradient(#1b2734, #1b2734) padding-box, linear-gradient(135deg, #137fec, #ff0080, #ffc800) border-box;
+        }
+
+      </style>
+
+      <!-- PDF.js library -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+
+      <script type="importmap">
+    {
+      "imports": {
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "react": "https://aistudiocdn.com/react@^19.2.0"
+      }
+    }
+    </script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
